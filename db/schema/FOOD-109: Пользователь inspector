@@ -1,0 +1,9 @@
+CREATE ROLE inspector WITH LOGIN PASSWORD 'NetoSQL2025';
+
+-- Выдача прав на схемы
+GRANT USAGE ON SCHEMA bulatov_food TO inspector;
+GRANT USAGE ON SCHEMA exts TO inspector;
+
+-- Выдача прав на таблицы и последовательности 
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA bulatov_food TO inspector;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA bulatov_food TO inspector;
